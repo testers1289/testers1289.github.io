@@ -21,8 +21,11 @@ jobs:
         with:
           node-version: 18
 
-      - name: Deploy to GitHub Pages
-        uses: actions/configure-pages@v4
+      - name: Build site
+        run: npm run build
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v3
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
