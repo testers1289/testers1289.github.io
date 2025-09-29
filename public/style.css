@@ -1,0 +1,21 @@
+:root{ --bg:#0f1720; --panel:#0b1220; --muted:#9aa4b2; --accent:#5865f2 }
+*{box-sizing:border-box;font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial}
+html,body,#app{height:100%;margin:0}
+body{background:linear-gradient(180deg,#071022, #07182a);color:#e6eef6}
+#app{display:flex;gap:12px;padding:12px;height:calc(100% - 64px)}
+aside#channels{width:300px;background:rgba(255,255,255,0.02);border-radius:8px;padding:12px;display:flex;flex-direction:column}
+#channels .header input{width:100%;margin-top:8px;padding:8px;border-radius:6px;border:1px solid rgba(255,255,255,0.05);background:transparent;color:inherit}
+#channel-list{list-style:none;padding:0;margin:8px 0;overflow:auto}
+#channel-list li{padding:8px;border-radius:6px;cursor:pointer}
+#channel-list li.active{background:rgba(88,101,242,0.12)}
+main#messages{flex:1;display:flex;flex-direction:column;background:rgba(255,255,255,0.02);border-radius:8px;padding:12px}
+#message-list{list-style:none;padding:0;margin:8px 0;flex:1;overflow:auto}
+#message-list li{padding:8px;border-radius:6px;background:rgba(255,255,255,0.02);margin-bottom:6px}
+#composer{display:flex;gap:8px}
+#composer input{flex:1;padding:8px;border-radius:6px;border:1px solid rgba(255,255,255,0.05);background:transparent;color:inherit}
+button{background:var(--accent);color:white;border:none;padding:8px 10px;border-radius:6px;cursor:pointer}
+button.danger{background:#e04a4a}
+nav#bottom-nav{position:fixed;left:0;right:0;bottom:0;height:56px;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:space-around}
+nav#bottom-nav button{background:transparent;border:0;color:var(--muted)}
+
+@media(max-width:700px){#app{flex-direction:column;padding-bottom:72px}aside#channels{width:100%;order:2}main#messages{order:1;height:60vh}}

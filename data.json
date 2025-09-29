@@ -1,0 +1,60 @@
+{
+  "channels": [
+    {
+      "id": "general",
+      "name": "general",
+      "messages": [
+        {
+          "id": "m1",
+          "text": "Welcome to the general channel!"
+        }
+      ]
+    },
+    {
+      "id": "random",
+      "name": "random",
+      "messages": [
+        {
+          "id": "m2",
+          "text": "Random chat starts here."
+        }
+      ]
+    },
+    {
+      "id": "testchannel",
+      "name": "TestChannel",
+      "messages": [
+        {
+          "id": "d0693f33-02ad-4cde-b149-230031732e43",
+          "text": "Hello from test"
+        }
+      ]
+    }
+  ],
+  "users": [
+    {
+      "username": "alice"
+    },
+    {
+      "username": "bob"
+    }
+  ],
+  "sessions": [
+    {
+      "token": "a16eefaf-ba48-490f-aed9-3cad4097e1f3",
+      "username": "alice"
+    },
+    {
+      "token": "836e7ba2-4b04-4eca-a1c9-b7869eaba67c",
+      "username": "bob"
+    },
+    {
+      "token": "0b58209f-8336-4df3-b81d-f94e6001cf83",
+      "username": "alice"
+    },
+    {
+      "token": "e59b3eaa-b0ca-447d-8358-7c026cb898d1",
+      "username": "bob"
+    }
+  ]
+}

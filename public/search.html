@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Search</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <main style="padding:24px;max-width:900px;margin:24px auto;background:rgba(255,255,255,0.02);border-radius:8px;">
+      <h2>Search</h2>
+      <input id="q" placeholder="Search channels & messages" style="width:100%;padding:8px" />
+      <ul id="results"></ul>
+      <p><a href="/">Back to app</a></p>
+    </main>
+    <script>
+      async function doSearch(q){
+        const res = await fetch('/api/search?q=' + encodeURIComponent(q));
+        const data = await res.json();
+        const ul = document.getElementById('results'); ul.innerHTML = '';
+        data.channels.forEach(c => { const li = document.createElement('li'); li.textContent = 'Channel: ' + c.name; ul.appendChild(li); });
+        data.messages.forEach(m => { const li = document.createElement('li'); li.textContent = '['+m.channelId+'] ' + m.text; ul.appendChild(li); });
+      }
+      document.getElementById('q').addEventListener('input', e => doSearch(e.target.value));
+    </script>
+  </body>
+</html>
