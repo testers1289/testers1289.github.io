@@ -7,3 +7,4 @@ This README explains how the app works, how to run it locally, and how to publis
 Website:
 https://laughing-space-giggle-q7grrjvrwr5424qpv-3000.app.github.dev/
 
+This is a basic demo.
